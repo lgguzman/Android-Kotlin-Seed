@@ -1,0 +1,24 @@
+<resources>
+    <!-- ONBOARDING !-->
+    <string name="activity_onboarding_1">Example Onboarding 1</string>
+    <string name="activity_onboarding_2">Example Onboarding 2</string>
+    <string name="activity_onboarding_3">Final Example</string>
+    <string name="activity_onboarding_button_login">Login</string>
+    <string name="activity_onboarding_button_register">Sign Up</string>
+
+    <!-- MENU !-->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="drawer_option_1">Home</string>
+    <string name="drawer_option_2">Profile</string>
+    <string name="drawer_option_3">LogOut</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- PHOTO!-->
+    <string name="message_user_photo_permission">This Permission is required to get picture</string>
+    <string-array name="photo_chooser">
+        <item>Camera</item>
+        <item>Gallery</item>
+    </string-array>
+</resources>

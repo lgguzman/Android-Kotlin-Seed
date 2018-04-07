@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="genero">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </array>
+    <array name="pais">
+        <item>Colombia</item>
+        <item>España</item>
+    </array>
+    <array name="estado">
+        <item>Atlántico</item>
+        <item>Cundinamarca</item>
+    </array>
+    <array name="ciudad">
+        <item>Barranquilla</item>
+        <item>Bogota</item>
+    </array>
+
+</resources>

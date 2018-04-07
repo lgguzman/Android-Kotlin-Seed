@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.lgguzman.example.kotlinseed.BuildConfig"/>
+    </data>
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    android:background="?attr/colorPrimary"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+                <RelativeLayout
+                    android:id="@+id/search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_below="@+id/toolbar"
+                    android:background="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/search_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="22dp"
+                        android:background="@drawable/white_search"
+                        android:gravity="start|center"
+                        android:inputType="text"
+                        android:translationZ="4dp"
+                        android:padding="10dp"
+                        android:textColorHint="@android:color/darker_gray" />
+                    <ImageView
+                        android:id="@+id/search_close"
+                        android:layout_centerVertical="true"
+                        android:layout_alignRight="@id/search_toolbar"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:translationZ="4dp"
+                        android:visibility="gone"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/white_close"/>
+                </RelativeLayout>
+
+
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe"
+                android:layout_width="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_height="match_parent">
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/nested"
+                    android:layout_width="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:fitsSystemWindows="true"
+                    android:fillViewport="true"
+                    android:layout_height="match_parent">
+                    <FrameLayout
+                        android:id="@+id/fragment_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </android.support.v4.widget.NestedScrollView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_gravity="start"
+            app:itemIconTint="@color/item_drawer"
+            app:itemTextColor="@color/item_drawer"
+            app:itemBackground="@android:color/transparent"
+            app:headerLayout="@layout/nav_header_main"
+            app:menu="@menu/menu_navigation_drawer">
+            <TextView
+                android:id="@+id/version"
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:textColor="@color/darkGrew"
+                android:text="V.1.0"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"/>
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+</layout>
+

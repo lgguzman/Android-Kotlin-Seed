@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/pagerindex"
+            android:layout_width="46dp"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="16dp"
+            android:layout_above="@+id/background_bottom"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/group_7"
+            android:layout_height="12dp" />
+        <RelativeLayout
+            android:id="@+id/background_bottom"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_height="180dp">
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_width="230dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:text="@string/activity_onboarding_button_login"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/drawable_button_primary_white"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:text="@string/activity_onboarding_button_register"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/drawable_button_primary"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>
+
