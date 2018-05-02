@@ -1,4 +1,4 @@
-# AndroidKotlinSeed
+# Android-Kotlin-Seed
 
 Android Project with easy way to Configuring first App.
 Use Kotlin, RxAndroid, DataBinding and more
