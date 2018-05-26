@@ -23,5 +23,7 @@
         <activity android:name=".ui.activities.onboarding.OnboardingActivity"/>
         <activity android:name=".ui.activities.main.MainActivity"/>
         <activity android:name=".ui.activities.main.ProfileActivity"/>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
     </application>
 </manifest>
