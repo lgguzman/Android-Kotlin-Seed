@@ -2,6 +2,8 @@ package com.lgguzman.example.kotlinseed.utils
 
 import android.Manifest
 import android.app.Activity.RESULT_OK
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.lgguzman.example.kotlinseed.general.App
@@ -147,6 +149,23 @@ import io.reactivex.android.schedulers.AndroidSchedulers
                         App.insecureUI(cancel)
                     }
                 }
+    }
+
+    fun openPhotoIntent( items: Array<String>, title: String){
+        val adb = AlertDialog.Builder(activity)
+        adb.setSingleChoiceItems(items, 0, object : DialogInterface.OnClickListener {
+            override fun onClick(dialog: DialogInterface?, which: Int) {
+                when(which){
+                    0 -> { openCamera()}
+                    else -> { openGallery()}
+                }
+                if (dialog!=null) dialog.dismiss()
+
+            }
+
+        })
+        adb.setTitle(title)
+        adb.show()
     }
 
 

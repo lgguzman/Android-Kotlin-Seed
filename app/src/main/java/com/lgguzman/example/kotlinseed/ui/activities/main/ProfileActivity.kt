@@ -48,21 +48,7 @@ class ProfileActivity : BasePhotoActivity() {
     }
 
     private fun openPhotoIntent(){
-        val adb = AlertDialog.Builder(this)
-        val items = resources.getStringArray(R.array.photo_chooser)
-        adb.setSingleChoiceItems(items, 0, object : DialogInterface.OnClickListener {
-            override fun onClick(dialog: DialogInterface?, which: Int) {
-                when(which){
-                    0 -> { photoHelper!!.openCamera()}
-                    else -> { photoHelper!!.openGallery()}
-                }
-                if (dialog!=null) dialog.dismiss()
-
-            }
-
-        })
-        adb.setTitle("Which one?")
-        adb.show()
+        photoHelper!!.openPhotoIntent(resources.getStringArray(R.array.photo_chooser), "Wich one?")
     }
 
 
